@@ -6,8 +6,9 @@
 
 html, body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #8A9BAE;
-  color: #1F1F1F;
+  background: linear-gradient(180deg, #7C8DA3 0%, #8A9BAE 60%, #9AA9BB 100%);
+  background-attachment: fixed;
+  color: #FFFFFF;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -15,3 +16,12 @@ html, body {
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; }
 img { max-width: 100%; display: block; }
+
+:root {
+  --bg-main: #8A9BAE;
+  --bg-card: #C5CFDA;
+  --text-dark: #1F1F1F;
+  --text-light: #FFFFFF;
+  --border-dark: #1F1F1F;
+  --border-light: rgba(255, 255, 255, 0.55);
+}

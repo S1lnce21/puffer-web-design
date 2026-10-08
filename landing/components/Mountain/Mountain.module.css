@@ -1,0 +1,115 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 31, 31, 0.35) 0%,
+    rgba(31, 31, 31, 0.1) 40%,
+    rgba(31, 31, 31, 0.75) 100%
+  );
+}
+
+.textLeft {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 200px;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.textSmall {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.textRight {
+  position: absolute;
+  top: 45%;
+  right: 5%;
+  z-index: 2;
+  max-width: 200px;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.tagline {
+  position: absolute;
+  bottom: 8%;
+  left: 5%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tagline h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .graffiti {
+    font-size: 22vw;
+  }
+  .tagline h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    min-height: 80vh;
+  }
+  .graffiti {
+    font-size: 28vw;
+    top: 25%;
+  }
+  .textLeft,
+  .textRight {
+    position: static;
+    max-width: 100%;
+    margin: 0 20px 20px;
+    text-align: left;
+  }
+  .textRight {
+    text-align: left;
+  }
+  .tagline {
+    bottom: 5%;
+    left: 20px;
+  }
+  .tagline h2 {
+    font-size: 1.8rem;
+  }
+}

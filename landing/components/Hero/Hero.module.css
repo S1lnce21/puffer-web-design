@@ -1,0 +1,250 @@
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  padding: 40px 60px 80px;
+  min-height: calc(100vh - 80px);
+  align-items: center;
+  color: var(--text-light);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 460px;
+}
+
+.label {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.sizeBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sizeRow {
+  display: flex;
+  gap: 28px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sizeRow span {
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.sizeRow span:hover {
+  color: #fff;
+}
+
+.sizeRow span.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.colorBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colorRow {
+  display: flex;
+  gap: 28px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.colorRow span {
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.colorRow span:hover {
+  color: #fff;
+}
+
+.colorRow span.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.ctaBlock {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 8px;
+}
+
+.ctaCircle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  background: transparent;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
+}
+
+.ctaCircle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  transform: scale(1.05);
+}
+
+.ctaCircle svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ctaText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ctaText .small {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ctaText .price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.thumbs {
+  display: flex;
+  gap: 12px;
+}
+
+.thumb {
+  position: relative;
+  width: 160px;
+  height: 220px;
+  background: var(--bg-card);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.thumb:hover {
+  transform: translateY(-4px);
+}
+
+.thumb img {
+  object-fit: cover;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F4F6F8;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  color: #4A5A6E;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.socialBtn:hover {
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.socialBtn img {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 40px 60px;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 20px 20px 50px;
+    min-height: auto;
+    gap: 30px;
+  }
+  .title {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+  .left {
+    max-width: 100%;
+    gap: 24px;
+  }
+  .ctaCircle {
+    width: 60px;
+    height: 60px;
+  }
+  .right {
+    align-items: flex-start;
+  }
+  .thumb {
+  width: 120px;
+  height: 160px;
+  }
+}
